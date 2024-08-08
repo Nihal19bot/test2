@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ff6600;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align hamburger button to the right */
+    position: relative;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    z-index: 101; /* Make sure the hamburger icon is above the menu */
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    position: fixed;
+    left: -300px; /* Positioned off-screen initially */
+    top: 0;
+    height: 100%;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: left 0.3s ease;
+}
+
+.nav-menu.active {
+    left: 0; /* Slide in when active */
+}
+
+.nav-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin: 15px 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.subscription {
+    margin: 20px 0;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plan {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.plan h3 {
+    margin: 0 0 10px;
+}
+
+.plan a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.list-product {
+    margin: 20px 0;
+}
+
+.list-product form input, 
+.list-product form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.list-product form button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list-product form button:hover {
+    background-color: #e65c00;
+}
